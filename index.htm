@@ -23,15 +23,16 @@
 			}
 			.gris-container-main{
 				display: grid;
-				height: 100%;
+				height: 100vh;
 				grid-template-areas:
-				'header header header header header header'
-				'menu main main main right right'
-				'menu footer footer footer footer footer';
+				'header header header header header header header header'
+				'menu main main main main main main right'
+				'menu footer footer footer footer footer footer footer';
+				grid-template-rows: 7% 85% 8%;
 			}
 
 			#item1 { grid-area: header; }
-			#item2 { grid-area: menu; height: 45.7vw;}
+			#item2 { grid-area: menu;}
 			#item3 { grid-area: main; }
 			#item4 { grid-area: right; }
 			#item5 { grid-area: footer; }
@@ -86,10 +87,10 @@
 				<div class="grid-item-nav"><a href="#">About</a></div>
 			</div>
 
-			<div id="item2" style="background-color: blue">1</div>
-			<div id="item3" style="background-color: red">2</div>
-			<div id="item4" style="background-color: yellow">3</div>
-			<div id="item5" style="background-color: aqua">4</div>
+			<div id="item2" style="background-color: blue"></div>
+			<div id="item3" style="background-color: red"></div>
+			<div id="item4" style="background-color: yellow"></div>
+			<div id="item5" style="background-color: aqua"></div>
 		</div>
 	</body>
 </html>
