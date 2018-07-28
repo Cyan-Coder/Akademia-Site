@@ -11,13 +11,7 @@
 			body{
 				display: grid;
 				margin: 0px;
-				background-color: white power;
-			}
-
-			li{
-				display: inline-block;
-				margin: 15px 20px;
-				background-color: purple;
+				background-color: white;
 			}
 
 			a{
@@ -26,33 +20,45 @@
 				color: red;
 			}
 
-			h1{
+			.grid-container {
+				display: grid;
+				grid-template-columns: 50% auto auto auto auto auto auto;
+				background-color: purple;
+				column-gap: 5px;
+			}
+			
+			.grid-item-welcome {
+				font-family: verdana;
+				font-size: 2vw;
+				text-decoration: none;
 				color: green;
-				font-family: comic sans ms;
+				padding: 0px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				text-align: center;
 			}
-			#header{
+
+			.grid-item-nav {
+				display: table;
+				font-size: 2vw;
+				border: solid;
 				background-color: blue;
-				height: auto;
-			}
-
-
-			#ul{
-				list-style: none;
-				margin: 10px;
+				padding: 0px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				text-align: center;
 			}
 		</style>
 	</head>
 	<body>
-		<div id="header">
-				<ul id="ul">
-					<li><a href="">Home</a></li>
-					<li><a href="">Maths</a></li>
-					<li><a href="">Physics</a></li>
-					<li><a href="">Tools</a></li>
-					<li><a href="">Contact</a></li>
-					<li><a href="">About</a></li>
-				</ul>
+		<div class="grid-container">
+			<div class="grid-item-welcome">Welcome to &Alpha;&kappa;&alpha;&delta;&epsilon;&mu;&iota;&alpha;</div>
+			<div class="grid-item-nav"><a href="#">Home</a></div>
+			<div class="grid-item-nav"><a href="#">Maths</a></div>
+			<div class="grid-item-nav"><a href="#">Physics</a></div>
+			<div class="grid-item-nav"><a href="#">Tools</a></div>
+			<div class="grid-item-nav"><a href="#">Contact</a></div>
+			<div class="grid-item-nav"><a href="#">About</a></div>
 		</div>
-			<h1>Welcome to ακαδεμια</h1>
 	</body>
 </html>
