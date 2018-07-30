@@ -9,13 +9,13 @@ body{
 	background-color: white;
 	}
 
-a{
+.grid-container-header > .grid-item-nav > a{
 	font-family: verdana;
 	text-decoration: none;
 	color: inherit;
 	}
 
-.gris-container-main{
+.grid-container-main{
 	display: grid;
 	height: 100vh;
 	grid-template-areas:
@@ -65,4 +65,11 @@ a{
 .grid-item-nav:hover{
 	background-color: green;
 	color: purple;
+	}
+
+.fancy-link{
+	color: violet;
+	font-family: arial;
+	font-size: 2vh;
+	margin: 5px; /*? might cause trouble later on!!!*/
 	}
