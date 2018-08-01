@@ -8,7 +8,7 @@
 		<div class="grid-container-main">
 			
 			<div id="item1" class="grid-container-header">
-				<div class="grid-item-welcome">$category_name$ + main articles</div>
+				<div class="grid-item-welcome" id="Header">$category_name$ + main articles</div>
 				<div class="grid-item-nav"><a href="index.htm">Home</a></div>
 				<div class="grid-item-nav"><a href="category.htm">Maths</a></div>
 				<div class="grid-item-nav"><a href="category.htm">Physics</a></div>
@@ -17,10 +17,31 @@
 				<div class="grid-item-nav"><a href="category.htm">About</a></div>
 			</div>
 
-			<div id="item2" style="background-color: blue"></div>
-			<div id="item3" style="background-color: red"></div>
+			<div id="item2" style="background-color: blue"><form><label><input type="submit" name="cat" value="but1"></label><br /><label><input type="submit" name="cat" value="but2"></label><br /><label><input type="submit" name="cat" value="but3"></label><br /><label><input type="submit" name="cat" value="but4"></label></form></div>
+			<div id="item3" style="background-color: red"><iframe src="http:\\youtube.com">hi</iframe></div>
 			<div id="item4" style="background-color: yellow"></div>
 			<div id="item5" style="background-color: aqua"></div>
 		</div>
+
+		<script type="text/javascript">
+			function getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, '\\$&');
+			    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			        results = regex.exec(url);
+			    if (!results) return null	;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+			var header = document.getElementById("Header");
+			var cat = getParameterByName("cat", window.location.href)
+			if (cat != null) {
+				document.title = getParameterByName("cat", window.location.href);
+				Header.innerHTML = getParameterByName("cat", window.location.href) + " main articles";
+			}else{
+				document.title = "Maths";
+				Header.innerHTML = "All main articles";
+			}
+		</script>
 	</body>
 </html>
